@@ -8,15 +8,38 @@ const styles = {
     fontSize: 18,
     cursor: 'pointer',
     textAlign: 'center',
+    padding: 10,
+    backgroundColor: '#e06064',
+    outline: 'none',
+  },
+  visible: {
+    display: 'inline-block',
+    position: 'relative',
+    color: '#fff',
+    fontSize: 18,
+    cursor: 'pointer',
+    textAlign: 'center',
+    padding: 10,
+    backgroundColor: '#e06064',
+    outline: 'none',
+    opacity: '1',
+    visibility: 'visible',
+    visiblilty: 'opacity .5s ease, visibility .5s ease',
+  },
+  hidden: {
+    display: 'none',
+    opacity: '0',
+    visibility: 'hidden',
+    visiblilty: 'opacity .5s ease, visibility .5s ease',
   },
 };
 
 class Button extends Component {
   render() {
-    let { style, label } = this.props;
-
+    let { label, onPress, isVisible } = this.props;
+    const btnStyles = isVisible ? styles.visible : styles.hidden;
     return (
-      <button onClick={this.props.onPress} style={{ ...styles.btn, ...style }}>
+      <button onClick={onPress} style={btnStyles}>
         {label}
       </button>
     );
