@@ -1,17 +1,6 @@
 import React, { Component } from 'react';
 
 const styles = {
-  btn: {
-    display: 'inline-block',
-    position: 'relative',
-    color: '#fff',
-    fontSize: 18,
-    cursor: 'pointer',
-    textAlign: 'center',
-    padding: 10,
-    backgroundColor: '#e06064',
-    outline: 'none',
-  },
   visible: {
     display: 'inline-block',
     position: 'relative',
