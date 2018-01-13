@@ -24,13 +24,12 @@ const styles = {
     outline: 'none',
     opacity: '1',
     visibility: 'visible',
-    visiblilty: 'opacity .5s ease, visibility .5s ease',
+    transition: 'opacity .5s ease, visibility .5s ease',
   },
   hidden: {
     display: 'none',
     opacity: '0',
     visibility: 'hidden',
-    visiblilty: 'opacity .5s ease, visibility .5s ease',
   },
 };
 

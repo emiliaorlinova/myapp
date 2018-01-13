@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Button from './components/Button.js';
+import Button from './components/Button';
 
 class App extends Component {
   constructor() {
@@ -10,7 +10,7 @@ class App extends Component {
       isButtonVisible: true,
     };
   }
-  handleButtonVisible() {
+  handleHideButton() {
     this.setState({ isButtonVisible: false });
   }
   render() {
@@ -21,15 +21,11 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">React App</h1>
         </header>
-        <Button
-          label={'eat'}
-          isVisible={isButtonVisible}
-          onPress={() => this.handleButtonVisible()}
-        />
+        <Button label={'eat'} isVisible={isButtonVisible} onPress={() => this.handleHideButton()} />
         <Button
           label={'spit'}
           isVisible={isButtonVisible}
-          onPress={() => this.handleButtonVisible()}
+          onPress={() => this.handleHideButton()}
         />
       </div>
     );
